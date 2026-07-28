@@ -1,1 +1,96 @@
+:root {
 
+    /* Colors */
+
+    --color-background: #0f1115;
+    --color-surface: #171a20;
+    --color-surface-alt: #1d2128;
+
+    --color-border: #2b313a;
+    --color-border-strong: #3a424d;
+
+    --color-text: #f5f7fa;
+    --color-text-secondary: #c0c8d2;
+    --color-text-muted: #8c96a3;
+
+    --color-accent: #d9a321;
+    --color-accent-hover: #e8b83d;
+    --color-accent-active: #b88b1d;
+
+    --color-success: #42b66b;
+    --color-warning: #d9a321;
+    --color-danger: #d95757;
+
+    /* Typography */
+
+    --font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.375rem;
+    --font-2xl: 1.75rem;
+    --font-3xl: 2.5rem;
+    --font-4xl: 3.5rem;
+
+    /* Spacing */
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 2.5rem;
+    --space-6: 3rem;
+    --space-7: 3.5rem;
+    --space-8: 4rem;
+    --space-9: 5rem;
+    --space-10: 6rem;
+    --space-11: 7rem;
+    --space-12: 8rem;
+
+    /* Layout */
+
+    --content-width: 1280px;
+    --content-width-narrow: 960px;
+
+    --navbar-height: 72px;
+
+    --section-padding-x: var(--space-4);
+    --section-padding-y: var(--space-10);
+
+    /* Borders */
+
+    --border-width: 1px;
+
+    --border-radius-sm: 6px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    /* Shadows */
+
+    --shadow-sm: 0 2px 8px rgb(0 0 0 / 18%);
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 24%);
+    --shadow-lg: 0 20px 48px rgb(0 0 0 / 32%);
+
+    /* Transitions */
+
+    --transition-fast: 120ms ease;
+    --transition-normal: 220ms ease;
+    --transition-slow: 350ms ease;
+
+    /* Layering */
+
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-overlay: 300;
+    --z-modal: 400;
+    --z-toast: 500;
+
+}
