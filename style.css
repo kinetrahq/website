@@ -1,1 +1,175 @@
+/* style.css
+   Production-quality, accessible, responsive styles for Kinetra landing page.
+   Dark theme, modern SaaS aesthetic, sharp corners, subtle animations.
+*/
 
+/* =========================
+   CSS Variables & Base
+   ========================= */
+:root{
+  --bg:#08090b;
+  --panel:#0f1113;
+  --muted:#98a0ab;
+  --text:#e6eef6;
+  --accent-1:#00d4ff; /* cooler cyan */
+  --accent-2:#7b61ff; /* purple */
+  --glass: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.04);
+  --radius: 6px; /* within 4-8px request */
+  --container-padding: 24px;
+  --max-width: 1200px;
+  --transition-fast: 180ms;
+  --transition-mid: 320ms;
+  --shadow-sm: 0 6px 20px rgba(2,6,23,0.6);
+}
+
+/* High contrast when supports */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg: #f7f9fb;
+    --panel:#ffffff;
+    --muted:#556277;
+    --text:#091220;
+    --glass: rgba(0,0,0,0.03);
+    --card-border: rgba(9,18,32,0.06);
+  }
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+html{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+     scroll-behavior:smooth;background:var(--bg); color:var(--text); font-size:16px;}
+body{margin:0; line-height:1.45; -webkit-tap-highlight-color:transparent}
+
+/* Skip link */
+.skip-link{
+  position:fixed; left:12px; top:12px; background:#000; color:#fff; padding:8px 12px;
+  border-radius:6px; z-index:100; transform:translateY(-120%); transition:transform var(--transition-fast);
+}
+.skip-link:focus{transform:none;}
+
+/* Container utility */
+.container{
+  max-width:var(--max-width); margin:0 auto; padding: 36px var(--container-padding);
+}
+
+/* Narrow variant */
+.container.narrow{max-width:920px; text-align:center;}
+
+/* Header */
+.site-header{position:sticky;top:0;background:linear-gradient(to bottom, rgba(0,0,0,0.35), transparent);backdrop-filter:saturate(1.1) blur(6px); z-index:50}
+.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:14px 0;}
+.wordmark{font-weight:800; font-size:20px; letter-spacing:0.6px; color:var(--text);}
+.nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:6px 8px;border-radius:6px;}
+.nav a:hover{color:var(--text); background:var(--glass);}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:6px;border:1px solid transparent;text-decoration:none;color:var(--text);font-weight:600;font-size:14px;cursor:pointer;transition:transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);}
+.btn:focus{outline:2px solid rgba(100,160,255,0.18); outline-offset:3px}
+.btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#021016; box-shadow: 0 6px 24px rgba(123,97,255,0.14); border:1px solid rgba(255,255,255,0.06)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04); color:var(--muted)}
+.btn:hover{transform:translateY(-3px)}
+
+/* Main hero */
+.hero{position:relative; padding:100px 0 80px; overflow:hidden; display:flex; align-items:center;}
+.hero-bg{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(800px 400px at 10% 20%, rgba(123,97,255,0.08), transparent 10%),
+    radial-gradient(600px 300px at 90% 80%, rgba(0,212,255,0.06), transparent 10%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  filter:blur(30px) saturate(1.2);
+  transform: translateZ(0);
+  animation: bgShift 18s linear infinite;
+  mix-blend-mode:screen;
+}
+
+/* subtle animated gradient shift */
+@keyframes bgShift{
+  0%{transform:translate3d(0,0,0) scale(1);}
+  50%{transform:translate3d(-20px,8px,0) scale(1.03);}
+  100%{transform:translate3d(0,0,0) scale(1);}
+}
+
+/* Hero content area */
+.hero-inner{position:relative; z-index:2; display:flex; align-items:center;}
+.hero-content{max-width:900px; margin:0 auto; text-align:center; padding:40px; border-radius:10px;}
+.hero-badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04);color:var(--muted); font-weight:700; font-size:12px;margin-bottom:18px;letter-spacing:0.6px}
+.hero-title{font-size:56px; margin:0; letter-spacing:-1px; font-weight:800; color:var(--text); line-height:1}
+.hero-subtitle{font-size:20px;color:var(--text); margin:12px 0 8px; font-weight:600}
+.hero-desc{color:var(--muted); max-width:780px; margin:0 auto 20px; font-size:16px}
+
+/* Hero parallax transforms will use transform on .hero-content children */
+.hero-cta{display:flex; gap:12px; justify-content:center; margin-top:22px}
+
+/* Sections */
+.section{padding:64px 0; border-top:1px solid rgba(255,255,255,0.02)}
+.section-title{font-size:24px; margin:0 0 8px; font-weight:700}
+.section-lead{color:var(--muted); margin:0 0 24px}
+
+/* Cards grid */
+.cards-grid{display:grid; grid-template-columns:repeat(1,1fr); gap:18px; margin-top:18px}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  border:1px solid var(--card-border);
+  padding:18px;border-radius:var(--radius); transition:transform var(--transition-mid), box-shadow var(--transition-mid), border-color var(--transition-mid);
+  box-shadow: var(--shadow-sm); color:var(--text);
+}
+.card:focus{outline:2px solid rgba(100,160,255,0.12); outline-offset:3px}
+.card:hover{transform:translateY(-8px); box-shadow: 0 18px 50px rgba(2,6,23,0.6); border-color: rgba(255,255,255,0.12)}
+.card-title{margin:0; font-size:18px; font-weight:700}
+.card-sub{color:var(--accent-1); font-weight:700; margin-top:8px; margin-bottom:8px}
+.card-desc{color:var(--muted); margin:0; font-size:14px}
+
+/* Platform */
+.platform-desc{color:var(--muted); max-width:780px; margin:12px auto 0}
+
+/* Timeline */
+.timeline{list-style:none;padding:0;margin:28px 0 0; display:flex; flex-direction:column; gap:18px; position:relative;}
+.timeline-item{display:flex; gap:18px; align-items:flex-start; border-radius:8px; padding:14px; border:1px solid rgba(255,255,255,0.02); background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);}
+.timeline-year{min-width:96px; color:var(--muted); font-weight:700; font-size:14px; text-align:left}
+.timeline-body h4{margin:0 0 8px; font-size:16px}
+.timeline-body p{margin:0;color:var(--muted);font-size:14px}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.02); padding:20px 0; background:transparent}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 0}
+.footer-left small{display:block;color:var(--muted)}
+.footer-email{color:var(--muted); text-decoration:none; font-weight:600}
+.footer-link{color:var(--muted); text-decoration:none; font-weight:600}
+
+/* Responsive layout */
+@media (min-width:640px){
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-title{font-size:72px}
+  .hero{padding:120px 0 80px}
+}
+
+@media (min-width:1024px){
+  .cards-grid{grid-template-columns:repeat(4,1fr)}
+  .header-inner{padding:18px 0}
+  .hero-content{padding:36px 40px}
+  .hero-title{font-size:88px}
+}
+
+/* Reveal animations (used with IntersectionObserver) */
+.reveal{opacity:0; transform:translateY(14px); transition:opacity 560ms cubic-bezier(.2,.9,.3,1), transform 560ms cubic-bezier(.2,.9,.3,1);}
+.reveal.in-view{opacity:1; transform:none;}
+
+.reveal-quiet{opacity:0; transform:translateY(10px); transition:opacity 640ms ease, transform 640ms ease;}
+.reveal-quiet.in-view{opacity:1; transform:none;}
+
+/* Subtle focus-visible for keyboard users */
+:focus{outline-offset:3px}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important; transition:none!important}
+  .hero-bg{filter:none}
+}
+
+/* Small UI tweaks */
+.card[tabindex="0"]{cursor:pointer}
