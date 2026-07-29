@@ -56,7 +56,7 @@
 
 }
 
-.feature {
+.ecosystem-card {
 
     padding: var(--space-6);
 
@@ -73,7 +73,7 @@
 
 }
 
-.feature:hover {
+.ecosystem-card:hover {
 
     transform: translateY(-4px);
 
@@ -85,13 +85,13 @@
 
 }
 
-.feature h3 {
+.ecosystem-card h3 {
 
     margin-bottom: var(--space-3);
 
 }
 
-.feature p {
+.ecosystem-card p {
 
     color: var(--color-text-secondary);
 
