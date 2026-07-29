@@ -113,7 +113,7 @@
     --container-width-text: 720px;
 
     --page-padding: var(--space-4);
-    --page-padding-mobile: var(--space-2);
+    --page-padding-mobile: var(--space-1);
 
     --section-spacing: var(--space-20);
     --section-spacing-compact: var(--space-12);
