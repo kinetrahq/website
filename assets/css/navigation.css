@@ -503,13 +503,6 @@
 }
 
 @media (max-width: 520px) {
-    .navbar__wordmark {
-        display: none;
-    }
-
-    .navbar__mobile-login {
-        display: none;
-    }
 
     .navbar__mobile-actions {
         gap: 6px;
