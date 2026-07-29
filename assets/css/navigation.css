@@ -73,10 +73,10 @@
 }
 
 .navbar__wordmark {
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-x1);
+    font-weight: var(--font-weight-semibold);
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
 }
 
 
