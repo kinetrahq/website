@@ -1,1 +1,326 @@
+/* ==========================================================
+   BASE TYPOGRAPHY
+   ========================================================== */
 
+body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text-primary);
+
+    font-weight: var(--font-weight-medium);
+    text-wrap: balance;
+}
+
+p {
+    color: var(--color-text-secondary);
+    text-wrap: pretty;
+}
+
+
+/* ==========================================================
+   DISPLAY TEXT
+   ========================================================== */
+
+.display {
+    max-width: 14ch;
+
+    font-size: clamp(
+        var(--font-size-4xl),
+        7vw,
+        var(--font-size-6xl)
+    );
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.display--wide {
+    max-width: 18ch;
+}
+
+.display--compact {
+    max-width: 11ch;
+}
+
+
+/* ==========================================================
+   HEADINGS
+   ========================================================== */
+
+.heading-1 {
+    max-width: 18ch;
+
+    font-size: clamp(
+        var(--font-size-3xl),
+        5vw,
+        var(--font-size-5xl)
+    );
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.heading-2 {
+    max-width: 20ch;
+
+    font-size: clamp(
+        var(--font-size-2xl),
+        4vw,
+        var(--font-size-4xl)
+    );
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+}
+
+.heading-3 {
+    max-width: 24ch;
+
+    font-size: clamp(
+        var(--font-size-xl),
+        3vw,
+        var(--font-size-3xl)
+    );
+    line-height: var(--line-height-snug);
+    letter-spacing: var(--letter-spacing-heading);
+}
+
+.heading-4 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-snug);
+    letter-spacing: -0.015em;
+}
+
+.heading-5 {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-snug);
+}
+
+.heading-6 {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-snug);
+}
+
+
+/* ==========================================================
+   BODY TEXT
+   ========================================================== */
+
+.body-lg {
+    max-width: 42rem;
+
+    font-size: var(--font-size-md);
+    line-height: 1.7;
+}
+
+.body-md {
+    max-width: 40rem;
+
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+}
+
+.body-sm {
+    max-width: 36rem;
+
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+.body-xs {
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   LABELS AND EYEBROWS
+   ========================================================== */
+
+.eyebrow {
+    color: var(--color-text-tertiary);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    letter-spacing: var(--letter-spacing-label);
+    text-transform: uppercase;
+}
+
+.label {
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-snug);
+}
+
+.label--strong {
+    color: var(--color-text-primary);
+}
+
+.label--muted {
+    color: var(--color-text-tertiary);
+}
+
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+
+    color: var(--color-text-primary);
+
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+
+    transition:
+        color var(--duration-fast) var(--ease-standard),
+        opacity var(--duration-fast) var(--ease-standard),
+        transform var(--duration-base) var(--ease-out);
+}
+
+.text-link:hover {
+    color: var(--color-accent-hover);
+}
+
+.text-link:active {
+    transform: translateY(1px);
+}
+
+.text-link--muted {
+    color: var(--color-text-secondary);
+}
+
+.text-link--muted:hover {
+    color: var(--color-text-primary);
+}
+
+
+/* ==========================================================
+   EMPHASIS
+   ========================================================== */
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-tertiary {
+    color: var(--color-text-tertiary);
+}
+
+.text-disabled {
+    color: var(--color-text-disabled);
+}
+
+.text-gradient {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #bdbdbd 100%
+        );
+
+    background-clip: text;
+    color: transparent;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ==========================================================
+   ALIGNMENT
+   ========================================================== */
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+/* ==========================================================
+   WIDTH CONTROL
+   ========================================================== */
+
+.measure-sm {
+    max-width: 28rem;
+}
+
+.measure-md {
+    max-width: 36rem;
+}
+
+.measure-lg {
+    max-width: 44rem;
+}
+
+.measure-xl {
+    max-width: 56rem;
+}
+
+
+/* ==========================================================
+   MONOSPACE
+   ========================================================== */
+
+.mono {
+    font-family: var(--font-family-mono);
+}
+
+.code-label {
+    color: var(--color-text-tertiary);
+
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.02em;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 768px) {
+    .display {
+        max-width: 12ch;
+    }
+
+    .display--wide {
+        max-width: 15ch;
+    }
+
+    .heading-1,
+    .heading-2,
+    .heading-3 {
+        max-width: none;
+    }
+
+    .body-lg {
+        font-size: var(--font-size-base);
+        line-height: 1.65;
+    }
+}
