@@ -65,6 +65,12 @@
     --section-padding-x: var(--space-4);
     --section-padding-y: var(--space-10);
 
+    --content-width-wide: 1440px;
+
+    --navbar-padding-x: var(--space-4);
+
+    --hero-max-width: 900px;
+
     /* Borders */
 
     --border-width: 1px;
@@ -84,6 +90,7 @@
     --transition-fast: 120ms ease;
     --transition-normal: 220ms ease;
     --transition-slow: 350ms ease;
+    --transition-default: 200ms ease;
 
     /* Layering */
 
