@@ -1,0 +1,46 @@
+.github {
+
+    padding: var(--space-10) 0;
+
+    text-align: center;
+
+}
+
+.github__container {
+
+    max-width: 720px;
+    margin: 0 auto;
+
+}
+
+.github__eyebrow {
+
+    margin-bottom: var(--space-3);
+
+    color: var(--color-accent);
+
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+}
+
+.github__headline {
+
+    margin-bottom: var(--space-4);
+
+    font-size: var(--font-3xl);
+
+}
+
+.github__description {
+
+    margin-bottom: var(--space-6);
+
+    color: var(--color-text-secondary);
+
+    line-height: 1.7;
+
+}

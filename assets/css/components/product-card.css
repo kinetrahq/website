@@ -1,0 +1,142 @@
+.products {
+
+    padding: var(--space-10) 0;
+
+}
+
+.products__header {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto var(--space-8);
+
+}
+
+.products__eyebrow {
+
+    margin-bottom: var(--space-3);
+
+    color: var(--color-accent);
+
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+}
+
+.products__headline {
+
+    margin-bottom: var(--space-4);
+
+    font-size: var(--font-3xl);
+
+    line-height: 1.1;
+
+}
+
+.products__description {
+
+    color: var(--color-text-secondary);
+
+    line-height: 1.7;
+
+}
+
+.products__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--space-5);
+
+}
+
+.product-card {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-4);
+
+    padding: var(--space-6);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    text-decoration: none;
+
+    transition:
+        background var(--transition-default),
+        border-color var(--transition-default),
+        transform var(--transition-default),
+        box-shadow var(--transition-default);
+
+}
+
+.product-card:hover {
+
+    background: var(--color-surface-hover);
+
+    border-color: var(--color-accent);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        var(--shadow-md),
+        var(--shadow-glow-sm);
+
+}
+
+.product-card h3 {
+
+    color: var(--color-text);
+
+    font-size: var(--font-xl);
+
+}
+
+.product-card p {
+
+    color: var(--color-text-secondary);
+
+    flex: 1;
+
+}
+
+.product-card span {
+
+    color: var(--color-accent);
+
+    font-weight: var(--font-weight-semibold);
+
+}
+
+.product-card__icon {
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface-alt);
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-accent);
+
+    font-size: var(--font-xl);
+    font-weight: var(--font-weight-bold);
+
+}
