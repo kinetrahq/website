@@ -46,7 +46,7 @@
 .navbar__brand {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-1);
+    gap: 10px;
 
     flex-shrink: 0;
 
