@@ -519,3 +519,7 @@
         padding-inline: 12px;
     }
 }
+
+body.navigation-open {
+    overflow: hidden;
+}
