@@ -247,3 +247,9 @@
     --z-overlay: 300;
     --z-modal: 400;
 }
+
+@media (max-width: 768px) {
+    :root {
+        --page-padding: 16px;
+    }
+}
