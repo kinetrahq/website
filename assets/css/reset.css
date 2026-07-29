@@ -131,6 +131,15 @@ select {
     background: none;
 }
 
+a,
+button,
+input,
+select,
+textarea,
+[role="button"] {
+    -webkit-tap-highlight-color: transparent;
+}
+
 textarea {
     resize: vertical;
 }
