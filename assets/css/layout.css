@@ -58,6 +58,33 @@ main {
     margin-inline: auto;
 }
 
+.content-container {
+    width: min(
+        calc(100% - 96px),
+        var(--container-width-wide)
+    );
+
+    margin-inline: auto;
+}
+
+@media (max-width: 1200px) {
+    .content-container {
+        width: calc(100% - 64px);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        width: calc(100% - 32px);
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        width: calc(100% - 24px);
+    }
+}
+
 
 /* ==========================================================
    SECTIONS
