@@ -219,6 +219,10 @@
 }
 
 .navbar__mobile-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     min-height: 36px;
     padding-inline: var(--space-1);
 
@@ -226,6 +230,7 @@
 
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
+    line-height: 1;
 }
 
 .navbar__mobile-login:hover {
