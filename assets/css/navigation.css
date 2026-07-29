@@ -238,8 +238,6 @@
 }
 
 .navbar__menu-button {
-    position: relative;
-
     width: 40px;
     height: 40px;
 
@@ -247,21 +245,27 @@
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--color-border-subtle);
-    border-radius: var(--radius-md);
+    padding: 0;
 
-    background: rgba(255, 255, 255, 0.02);
+    border: 0;
+    background: transparent;
 
-    transition: var(--transition-interactive);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+
+    transition:
+        color var(--duration-fast) var(--ease-standard),
+        opacity var(--duration-fast) var(--ease-standard),
+        transform var(--duration-base) var(--ease-out);
 }
 
 .navbar__menu-button:hover {
-    border-color: var(--color-border-default);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-primary);
+    opacity: 0.9;
 }
 
 .navbar__menu-button:active {
-    background: rgba(255, 255, 255, 0.08);
+    transform: scale(0.96);
 }
 
 .navbar__menu-icon {
@@ -281,7 +285,7 @@
     width: 100%;
     height: 1px;
 
-    background: var(--color-text-primary);
+    background: currentColor;
 
     transition:
         top var(--duration-base) var(--ease-out),
