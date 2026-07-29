@@ -1,0 +1,168 @@
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+    padding-top: clamp(80px, 10vw, 144px);
+}
+
+.hero__heading {
+    max-width: 1040px;
+}
+
+.hero__title {
+    margin: 0;
+
+    font-size: clamp(56px, 7.2vw, 112px);
+    font-weight: var(--font-weight-semibold);
+    line-height: 0.96;
+    letter-spacing: -0.055em;
+
+    color: var(--color-text-primary);
+}
+
+.hero__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-8);
+
+    margin-top: clamp(40px, 5vw, 72px);
+}
+
+.hero__subtitle {
+    max-width: 620px;
+    margin: 0;
+
+    font-size: clamp(
+        var(--font-size-base),
+        1.5vw,
+        var(--font-size-xl)
+    );
+
+    line-height: 1.55;
+
+    color: var(--color-text-secondary);
+}
+
+.hero__status {
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--color-text-secondary);
+
+    cursor: default;
+}
+
+.hero__status:disabled {
+    color: var(--color-text-secondary);
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   PLATFORM DEMO
+   ========================================================== */
+
+.platform-demo {
+    padding-top: clamp(64px, 8vw, 112px);
+}
+
+.platform-demo__frame {
+    min-height: min(82vh, 960px);
+}
+
+.platform-demo__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: min(82vh, 960px);
+
+    display: grid;
+    place-items: center;
+}
+
+.platform-demo__label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.02em;
+
+    color: var(--color-text-tertiary);
+}
+
+.platform-demo__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero__title {
+        font-size: clamp(52px, 11vw, 84px);
+    }
+
+    .hero__footer {
+        align-items: flex-start;
+
+        margin-top: 40px;
+    }
+
+    .platform-demo {
+        padding-top: 72px;
+    }
+
+    .platform-demo__frame,
+    .platform-demo__placeholder {
+        min-height: 70vh;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding-top: 64px;
+    }
+
+    .hero__title {
+        font-size: clamp(48px, 13vw, 68px);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+    }
+
+    .hero__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+
+        margin-top: 32px;
+    }
+
+    .hero__subtitle {
+        max-width: 100%;
+
+        font-size: var(--font-size-base);
+    }
+
+    .platform-demo {
+        padding-top: 56px;
+    }
+
+    .platform-demo__frame,
+    .platform-demo__placeholder {
+        min-height: 68vh;
+    }
+}
