@@ -1,4 +1,4 @@
-# Kinetra Website
+# Meridian Website
 
 This repository contains the source code and assets for the official Kinetra website.
 
@@ -6,4 +6,4 @@ The site itself can be found [here](https://www.gokinetra.com) and is hosted via
 
 ---
 
-© Kinetra, 2026
+© Meridian, 2026
