@@ -60,8 +60,8 @@ main {
 
 .content-container {
     width: min(
-        calc(100% - 96px),
-        var(--container-width-wide)
+        calc(100% - 160px),
+        1280px
     );
 
     margin-inline: auto;
@@ -69,19 +69,19 @@ main {
 
 @media (max-width: 1200px) {
     .content-container {
-        width: calc(100% - 64px);
+        width: calc(100% - 96px);
     }
 }
 
 @media (max-width: 768px) {
     .content-container {
-        width: calc(100% - 32px);
+        width: calc(100% - 48px);
     }
 }
 
 @media (max-width: 480px) {
     .content-container {
-        width: calc(100% - 24px);
+        width: calc(100% - 32px);
     }
 }
 
