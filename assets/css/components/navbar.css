@@ -1,1 +1,81 @@
+@import url("../variables.css");
 
+/* Navbar */
+
+.navbar {
+    position: relative;
+    width: 100%;
+    height: var(--navbar-height);
+
+    background: var(--color-background);
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+/* Brand */
+
+.navbar__brand {
+    color: var(--color-text);
+
+    font-size: var(--font-xl);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.02em;
+
+    transition: color var(--transition-fast);
+}
+
+.navbar__brand:hover {
+    color: var(--color-accent);
+}
+
+/* Navigation */
+
+.navbar__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.navbar__nav a {
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-md);
+    font-weight: var(--font-weight-medium);
+
+    transition:
+        color var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+.navbar__nav a:hover {
+    color: var(--color-text);
+}
+
+.navbar__nav a:active {
+    color: var(--color-accent);
+}
+
+/* Active Page */
+
+.navbar__nav a.active {
+    color: var(--color-accent);
+}
+
+/* Mobile Toggle */
+
+.navbar__toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+}
